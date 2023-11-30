@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
+
+  </head>
+  
+  <body>
+    <a-scene>
+        <img id="tortu" src="assets/foto1.jpg">
+        <a-light type="point" intensity="1" color="#FF5C00" position="0 80 -90"></a-light>
+        <a-light type="point" intensity="1" color="#FF6400" position="0 80 -90"></a-light>
+
+        <a-assets>
+          <video id="videoGato" autoplay loop="true" src="assets/video_1.mp4"></video>
+        </a-assets>
+      
+        
+
+        
+        
+    <a-entity environment= 
+    "preset: goldmine;
+    seed: 8;
+    skyType: gradient;
+    skyColor: #2719DA;
+    horizonColor: #FFAE00;
+    lighting: distant;
+    lightPosition: 0.1;
+    ground: hills;
+    groundYScale: 40:
+    groundTexture: checkerboard;
+    groundColor: #D82088;
+    groundColor2: #A4005D;
+    dressing: trees;
+    dressingAmount: 1000;
+    "> </a-entity>
+
+
+        <a-circle color="#FF5C00" radius="5" position="0 80 -90"></a-circle>
+        
+        <a-cone color="tomato" position="-4 -8 0" radius-bottom="2" radius-top="0.5"></a-cone>
+        <a-cylinder color="crimson" position="11 6 -17" height="12" radius="1.5"></a-cylinder>
+        <a-cylinder color="crimson" position="-11 6 -17" height="12" radius="1.5"></a-cylinder>
+        
+
+    <a-box color="blue" position=" 0 2 -4"> </a-box>
+    <a-video src="#videoGato" width="16" height="9" position="0 6 -20"></a-video>
+
+    <a-camera position="0 5 0"></a-camera>
+   
+  </a-scene>
+  </body>
+</html>
